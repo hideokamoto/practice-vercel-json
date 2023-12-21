@@ -1,12 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/api(.*)",
-      "destination": "/"
-    },
-    {
       "source": "/demo",
       "destination": "https://github.com/vercel/vercel"
+    },
+    {
+      "source": "/demo1/(.*)",
+      "destination": "https://github.com/vercel/vercel/"
+    },
+    {
+      "source": "/demo2/:path*",
+      "destination": "https://github.com/vercel/vercel/:path*"
     }
   ]
 }
