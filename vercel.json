@@ -29,10 +29,6 @@
       "destination": "https://stripe.dev/veneur"
     },
     {
-      "source": "/elements-examples",
-      "destination": "https://stripe.dev/elements-examples"
-    },
-    {
       "source": "/stripe-terminal-ios",
       "destination": "https://stripe.dev/stripe-terminal-ios"
     },

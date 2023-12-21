@@ -7,9 +7,16 @@ export const config = {
 
 const app = new Hono()
 const apiApp = new Hono()
+const elementsApp = new Hono()
+
+elementsApp.get('/*', c => {
+  console.log({path: c.req.path})
+  return fetch('https://stripe.dev/elements-examples')
+})
 
 apiApp.get('/test', (c) => c.json({ message: 'Hello Hono!!!' }))
 app.route('/api', apiApp)
+app.route('/elements-examples', elementsApp)
 app.get('/*', async c => {
   return c.html(`
   <!DOCTYPE html>
