@@ -5,20 +5,21 @@ export const config = {
   runtime: 'edge',
 }
 
-const app = new Hono()//.basePath('/api')
+const app = new Hono()
+const apiApp = new Hono()
 
-app.get('/test', (c) => c.json({ message: 'Hello Hono!!!' }))
-app.get('/api/test', (c) => c.json({ message: 'Hello Hono!' }))
+apiApp.get('/test', (c) => c.json({ message: 'Hello Hono!!!' }))
 app.get('/*', async c => {
   return c.html(`
   <!DOCTYPE html>
   <html>
       <body>
           <h1>Hell hono on Vercel</h1>
-          <pre><code>${JSON.stringify(c.req.header())}</code></pre>
+          <p>We're in the <code>${c.req.path}</code></p>
       </body>
   </html>
   `)
 })
 
+app.route('/api', apiApp)
 export default handle(app)
