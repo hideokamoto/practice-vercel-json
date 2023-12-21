@@ -5,55 +5,55 @@
       "destination": "/api"
     },
     {
-      "source": "stripe-java",
+      "source": "/stripe-java",
       "destination": "https://stripe.dev/stripe-java"
     },
     {
-      "source": "stripe-ios",
+      "source": "/stripe-ios",
       "destination": "https://stripe.dev/stripe-ios"
     },
     {
-      "source": "stripe-android",
+      "source": "/stripe-android",
       "destination": "https://stripe.dev/stripe-android"
     },
     {
-      "source": "scalding",
+      "source": "/scalding",
       "destination": "https://stripe.dev/scalding"
     },
     {
-      "source": "sequins",
+      "source": "/sequins",
       "destination": "https://stripe.dev/sequins"
     },
     {
-      "source": "veneur",
+      "source": "/veneur",
       "destination": "https://stripe.dev/veneur"
     },
     {
-      "source": "elements-examples",
+      "source": "/elements-examples",
       "destination": "https://stripe.dev/elements-examples"
     },
     {
-      "source": "stripe-terminal-ios",
+      "source": "/stripe-terminal-ios",
       "destination": "https://stripe.dev/stripe-terminal-ios"
     },
     {
-      "source": "stripe.github.io",
+      "source": "/stripe.github.io",
       "destination": "https://stripe.dev/stripe.github.io"
     },
     {
-      "source": "stripe-terminal-android",
+      "source": "/stripe-terminal-android",
       "destination": "https://stripe.dev/stripe-terminal-android"
     },
     {
-      "source": "stripe-react-native",
+      "source": "/stripe-react-native",
       "destination": "https://stripe.dev/stripe-react-native"
     },
     {
-      "source": "stripe-terminal-react-native",
+      "source": "/stripe-terminal-react-native",
       "destination": "https://stripe.dev/stripe-terminal-react-native"
     },
     {
-      "source": "stripe-identity-react-native",
+      "source": "/stripe-identity-react-native",
       "destination": "https://stripe.dev/stripe-identity-react-native"
     }
   ]
