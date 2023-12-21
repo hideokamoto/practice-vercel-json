@@ -9,6 +9,7 @@ const app = new Hono()
 const apiApp = new Hono()
 
 apiApp.get('/test', (c) => c.json({ message: 'Hello Hono!!!' }))
+app.route('/api', apiApp)
 app.get('/*', async c => {
   return c.html(`
   <!DOCTYPE html>
@@ -21,5 +22,4 @@ app.get('/*', async c => {
   `)
 })
 
-app.route('/api', apiApp)
 export default handle(app)
