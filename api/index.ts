@@ -10,10 +10,15 @@ const app = new Hono()//.basePath('/api')
 app.get('/test', (c) => c.json({ message: 'Hello Hono!!!' }))
 app.get('/api/test', (c) => c.json({ message: 'Hello Hono!' }))
 app.get('/*', async c => {
-  const path = c.req.path.replace(/^\/api/, '')
-  console.log({path,d: `https://github.com/hideokamoto/practice-vercel-json${path}`})
-  const data = await fetch(`https://github.com/hideokamoto/practice-vercel-json${path}`)
-  return data
+  return c.html(`
+  <!DOCTYPE html>
+  <html>
+      <body>
+          <h1>Hell hono on Vercel</h1>
+          <pre><code>${JSON.stringify(c.req.header())}</code></pre>
+      </body>
+  </html>
+  `)
 })
 
 export default handle(app)
