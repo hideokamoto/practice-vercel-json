@@ -10,8 +10,13 @@ const apiApp = new Hono()
 const elementsApp = new Hono()
 
 elementsApp.get('/*', c => {
-  console.log({path: c.req.path})
   const path = c.req.path.replace(/^\/elements-examples/, '')
+  console.log([
+    path,
+    c.req.path.replace(/^\/elements-examples/, ''),
+    c.req.path,
+    `https://stripe.dev/elements-examples${path}`
+  ])
   return fetch(`https://stripe.dev/elements-examples${path}`)
 })
 
