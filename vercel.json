@@ -3,6 +3,10 @@
     {
       "source": "/api(.*)",
       "destination": "/"
+    },
+    {
+      "source": "/demo",
+      "destination": "https://github.com/vercel/vercel"
     }
   ]
 }
