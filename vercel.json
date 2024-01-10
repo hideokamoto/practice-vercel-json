@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/astro-sandbox",
+      "destination": "https://hideokamoto.github.io/astro-sandbox/"
+    },
+    {
       "source": "/(.*)",
       "destination": "/api"
     },
